@@ -263,27 +263,84 @@ body {
     width: 50vw;
   }
 }
-@media (max-width: 800px) {
+/* ... (previous CSS rules) ... */
+/* ... (previous CSS rules) ... */
+@media(max-width:1000px){
   .cards2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4vh auto 2vh;
+    width: 75vw;
+  }
+  .card2 {
+    margin: 2vh auto;
+    width: 100%;
+  }
+  .cards {
     flex-direction: column;
     align-content: center;
     align-items: center;
     margin: 4vh auto 2vh;
-    width: 100%; /* Defina a largura para ocupar 100% da largura disponível */
+    width: 75vw;
   }
-  .card2 {
+  .card {
     margin: 4vh auto 2vh;
+    width: 75vw;
+  }
+
+}
+@media (max-width: 800px) {
+  .cards {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 2vh auto 1vh;
+    width: 90%;
+  }
+  .card {
+    margin: 4vh auto 2vh;
+    width: 75vw;
+  }
+  /* Alinhar itens no mapa ao centro */
+  .mapa {
+    text-align: center;
+  }
+  /* Centralizar a logo e iframe no centro */
+  .img-log {
+    align-items: center;
+    justify-content: center;
+  }
+  #logo {
     width: 70vw;
+  }
+  .logo-info iframe {
+    width: 70vw;
+    height: 40vh;
   }
 }
 
 @media (max-width: 500px) {
-  .cards2 {
+  .cards {
     margin: 4vh auto 2vh;
-    width: 90%; /* Defina a largura para ocupar 90% da largura disponível */
+    width: 90%;
   }
-  .card2 {
+  .card {
     margin: 4vh auto 2vh;
     width: 80vw;
+  }
+  .card2 button{
+    width: 90%;
+  }
+  .cards2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4vh auto 2vh;
+    width: 90%;
+  }
+  .card2 {
+    margin: 2vh auto;
+    width: 100%;
   }
 }

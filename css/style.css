@@ -32,7 +32,14 @@ body {
   overflow-x: hidden;
   font-family: 'Montserrat';
   background-color: #003466;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
 }
+
+
 
 .logo-info {
   width: 80vw;
@@ -256,66 +263,27 @@ body {
     width: 50vw;
   }
 }
-
 @media (max-width: 800px) {
   .cards2 {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    margin: 0 auto;
-    justify-content: center;
+    margin: 4vh auto 2vh;
+    width: 100%; /* Defina a largura para ocupar 100% da largura disponível */
   }
   .card2 {
     margin: 4vh auto 2vh;
     width: 70vw;
   }
-  .card {
-    width: 70vw;
-  }
-
 }
+
 @media (max-width: 500px) {
-    
-    .card2 {
-      width: 80vw;
-    }
-    .card {
-      width: 80vw;
-    }
-    #logo{
-        width: 90vw;
-    }
-    .mapa iframe{
-        width: 80vw;
-    }
-    .card2 button{
-        width: 70%;
-    }
-    .redes img{
-    width: 40px;
-    height: 40px;
-    }
+  .cards2 {
+    margin: 4vh auto 2vh;
+    width: 90%; /* Defina a largura para ocupar 90% da largura disponível */
   }
-  
-  @media (max-width: 500px) {
-    
-    .card2 {
-      width: 90vw;
-    }
-    .card {
-      width: 90vw;
-    }
-    #logo{
-        width: 95vw;
-    }
-    .mapa iframe{
-        width: 90vw;
-    }
-    .card2 button{
-        width: 70%;
-    }
-    .redes img{
-    width: 40px;
-    height: 40px;
-    }
+  .card2 {
+    margin: 4vh auto 2vh;
+    width: 80vw;
   }
+}

@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 @keyframes transition1 {
@@ -38,8 +39,18 @@ body {
   align-content: center;
   flex-direction: column;
 }
-
-
+.img-logo {
+  height: 50%;
+  transition: transform 0.3s ease-out;
+}
+.title{
+  color: #fff;
+  font-size: xxx-large;
+  text-align: center;
+  margin-top: 3em;
+  animation-name: transition1;
+  animation-duration: 1s;
+}
 
 .logo-info {
   width: 80vw;
@@ -47,7 +58,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 70px auto 40px;
   justify-content: space-around;
   animation-name: transition1;
   animation-duration: 1s;
@@ -62,8 +73,18 @@ body {
 .mapa iframe {
   border-radius: 20px;
 }
+.bgesc{
+  background-color: #003566;
+  width: 100vw;
+  padding: 10vh;
+  padding-bottom: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-.card {
+.carde {
   width: 350px;
   box-shadow: #0000003d 0px 3px 8px;
   display: flex;
@@ -79,13 +100,29 @@ body {
   height: 80px;
   transition: .4s;
 }
+.fade-border {
+  position: relative;
+  padding: 70px;
+  width: 150vw; /* Ajuste conforme necessário */
+}
 
-.card img {
+.fade-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #003566, #004C94); /* Ajuste as cores conforme necessário */
+  border-radius: 70px; /* Ajuste conforme necessário e deve ser igual ao valor do padding */
+}
+.carde img {
   width: 70px;
 }
 
 .cards {
-  margin: 10vh auto 5vh;
+  margin: 15vh auto 5vh;
   width: 85%;
   display: flex;
   flex-direction: row;
@@ -140,9 +177,9 @@ body {
 .card2 button {
   background-color: #003466;
   font-size: larger;
-  width: 300px;
-  color: #fff;
-  padding: 10px;
+  width: 80%;
+  color: #c2e2ff;
+  padding: 20px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -151,7 +188,51 @@ body {
 }
 
 .card2:hover {
-  transform: scale(1.009);
+  transform: scale(1.01);
+}
+.main-services {
+  margin: 5vh auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-wrap: wrap;
+  animation-name: transition2;
+  animation-duration: 1s;
+
+}
+
+.service-card {
+  width: 450px;
+  height: 650px; /* Adicione uma altura fixa aos cards */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  padding: 20px;
+  border-radius: 20px;
+  margin: 15px;
+  background-color: #fff;
+  transition: .4s;
+  text-align: center;
+}
+
+.service-card img {
+  width: 350px;
+  margin-bottom: 15px;
+  border: 5px solid #004C94;
+  border-radius: 10px;
+  height: 70%;
+}
+
+.service-title {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  text-align: center;
 }
 
 .card2 button:hover {
@@ -160,7 +241,7 @@ body {
 
 .card2 img {
   margin: 30px auto;
-  height: 40%;
+  height: 50%;
 }
 
 .title-card2 {
@@ -171,7 +252,7 @@ body {
 .cards{
   transition: .5s;
 }
-.card:hover {
+.carde:hover {
   transform: scale(1.03);
 }
 
@@ -214,6 +295,7 @@ body {
 .redes {
   display: flex;
   flex-direction: row;
+  margin: 10px;
 }
 
 .redes img {
@@ -225,7 +307,7 @@ body {
 }
 
 .redes img:hover {
-  transform: scale(1.07);
+  transform: scale(1.1);
 }
 
 @media (max-width: 1400px) {
@@ -243,6 +325,7 @@ body {
     align-items: center;
     margin: 0 auto;
     align-self: center;
+    width: 100%;
     justify-content: center;
   }
   #logo{
@@ -261,7 +344,7 @@ body {
     align-items: center;
     align-content: center;
   }
-  .card {
+  .carde {
     margin: 1.5vh auto;
     width: 50vw;
   }
@@ -280,6 +363,9 @@ body {
     margin: 2vh auto;
     width: 100%;
   }
+  .card2 button{
+    padding: 10px;
+  }
   .cards {
     flex-direction: column;
     align-content: center;
@@ -287,7 +373,7 @@ body {
     margin: 4vh auto 2vh;
     width: 75vw;
   }
-  .card {
+  .carde {
     margin: 4vh auto 2vh;
     width: 75vw;
   }
@@ -301,7 +387,7 @@ body {
     margin: 2vh auto 1vh;
     width: 90%;
   }
-  .card {
+  .carde {
     margin: 4vh auto 2vh;
     width: 75vw;
   }
@@ -314,12 +400,34 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .fade-border {
+    position: relative;
+    padding: 40px;
+    width: 150vw; /* Ajuste conforme necessário */
+  }
+  
+  .fade-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom, #003566, #004C94); /* Ajuste as cores conforme necessário */
+    border-radius: 40px; /* Ajuste conforme necessário e deve ser igual ao valor do padding */
+  }
   #logo {
-    width: 70vw;
+    width: 90vw;
   }
   .logo-info iframe {
     width: 70vw;
     height: 40vh;
+  }
+  .title{
+    color: #fff;
+    font-size: xx-large;
+    margin-top: 2.5em;
   }
 }
 
@@ -328,7 +436,7 @@ body {
     margin: 4vh auto 2vh;
     width: 90%;
   }
-  .card {
+  .carde {
     margin: 4vh auto 2vh;
     width: 80vw;
   }
@@ -346,4 +454,21 @@ body {
     margin: 2vh auto;
     width: 100%;
   }
+}
+.btn-agendar button{
+  width:70vw;
+  padding: 20px;
+  background-color:#004382;
+  border-radius: 10px;
+  color: #fff;
+  transition: .3s;
+  border: #003466 4px solid;
+}
+.btn-agendar{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: x-large;
+}
+.btn-agendar button:hover{
+  transform: scale(1.03);
 }
